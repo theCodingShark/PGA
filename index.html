@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Hotel Booking Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="head">
+    <div class="container flex1">
+      <div class="userEntry">
+        <button id="loginBtn" onclick="openLogin()">Login</button>
+        <script src="js/login.js"></script>
+        <button id="signupBtn" onclick="openSignup()">Signup</button>
+        <script src="js/signup.js"></script>
+      </div>
+      <div class="logo">
+        <p class="logo-header" style="color: black; padding: 5px 0;">PGA</p>
+      </div>
+      <div class="address">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Street No. 14, Newtown, Kolkata, WB, India</span>
+      </div>
+    </div>
+  </section>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar flex1">
+        <div class="sticky_logo logo">
+          <p class="logo-header">PGA</p>
+        </div>
+        <ul class="nav-menu">
+          <li> <a href="#home">Home</a> </li>
+          <li> <a href="#about">about</a> </li>
+          <li> <a href="#room">Services</a> </li>
+          <li> <a href="#services">Rooms</a> </li>
+          <li> <a href="#testimonials">Testimonials</a> </li>
+          <li> <a href="#gallery">Gallery</a> </li>
+          <li> <a href="#contact">contact</a> </li>
+          <li> <a href="payment.html">Payment</a> </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <div class="head_contact">
+          <i class="fa-solid fa-phone-volume"></i>
+          <span>+91 99009 90099</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    hamburger.addEventListener("click", mobliemmenu);
+    function mobliemmenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+    window.addEventListener("scroll", function() {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0)
+    })
+  </script>
+
+  <section class="home" id="home">
+    <div class="container">
+      <h1>Welcome Home</h1>
+      <p>Discover Your Perfect Living Space with Us</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="heading">
+        <h5>EXPLORE</h5>
+        <h2>We are cool to give you pleasure</h2>
+      </div>
+      <div class="content flex  top">
+        <div class="left">
+          <h3>Creating Memorable Living Experiences in a Welcoming Community</h3>
+          <p>Welcome to PGA, where we redefine the concept of shared living. As a leading provider of premium PG accommodations, our goal is to create an environment that feels like home while offering a sense of community and comfort.</p>
+          <p>At PGA, we understand that finding the right living space is essential for a fulfilling experience. That's why our PGs offer well-furnished rooms, modern amenities, and a range of facilities to cater to your needs. Whether you're a student, or a young professional, we have a variety of options to suit your lifestyle and preferences.</p>
+          <p>Located in prime areas, our PGs offer easy access to transportation, shopping centers, dining options, and recreational facilities. We prioritize convenience to enhance your overall living experience and make your daily routines effortless.</p>
+        </div>
+        <div class="right">
+          <img src="image/a.jpg" alt="" width="650px" height="480px">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrapper">
+    <div class="container">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="heading">
+            <h5>COMFORTABLE LIVING SPACES</h5>
+            <h3>Your Home Away from Home</h3>
+          </div>
+          <p>At our PG, we understand the importance of a comfortable and inviting living space. Our thoughtfully designed accommodations are tailored to provide you with a home away from home. From cozy private rooms to spacious shared apartments, we have options to suit your preferences and budget.</p>
+          <p>Each room is furnished with comfortable beds, study areas, storage solutions, and modern amenities to ensure that you have everything you need for a comfortable and convenient living experience. Whether you're a food lover, an art enthusiast, or an adventurer seeking new experiences, our prime location puts you in the heart of it all.</p>
+        </div>
+        <div class="item">
+          <div class="heading">
+            <h5>COMMUNITY-FOCUSED ENVIRONMENT</h5>
+            <h3>Forge Lifelong Friendships</h3>
+          </div>
+          <p>Living in our PG goes beyond just having a comfortable living space. It's about being part of a vibrant and supportive community. Our PGs highlight the community-focused environment that we foster. We believe in creating a space where residents can connect, interact, and forge lifelong friendships.</p>
+          <p>Our common areas are designed to facilitate social interactions, with cozy lounges, communal kitchens, and recreational spaces where you can bond with fellow residents. Experience the joy of living in a close-knit community that becomes your extended family.
+          </p>            
+        </div>
+        <div class="item">
+          <div class="heading">
+            <h5>MODERN AMENITIES & FACILITIES</h5>
+            <h3>Enhancing Your Living Experience</h3>
+          </div>
+          <p>We believe that a great living experience is not just about the rooms but also about the amenities and facilities that accompany it. In our PGs, you'll discover a wide range of modern amenities and facilities that are designed to enhance your lifestyle. From a well-equipped gym to a relaxing swimming pool and outdoor spaces, we have facilities that cater to your physical and mental well-being. </p>
+          <p>High-speed internet connectivity, 24/7 security, and on-site maintenance services are also available to ensure that your needs are met with utmost convenience.</p>    
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='far fa-long-arrow-alt-left'></i>", "<i class='far fa-long-arrow-alt-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+  <section class="room wrapper2 top" id="room">
+    <div class="container">
+      <div class="heading">
+        <h5>AMENITIES</h5>
+        <h2>Giving entirely awesome</h2>
+      </div>
+      <div class="content flex mtop">
+        <div class="left grid2">
+          <div class="box">
+            <i class="fa-solid fa-building-lock" style="padding-top: 35px;"></i>
+            <h3 style="padding-top: 25px;">24/7 Security</h3>
+          </div>
+          <div class="box">
+            <i class="fa-solid fa-indian-rupee-sign" style="padding-top: 35px;"></i>
+            <h3 style="padding-top: 25px;">Best rate guarantee</h3>
+          </div>
+          <div class="box">
+            <i class="fa-regular fa-clock" style="padding-top: 35px;"></i>     
+            <h3 style="padding-top: 25px;">Anytime entry</h3>
+          </div>
+          <div class="box">
+            <i class="fa-solid fa-wifi" style="padding-top: 35px;"></i>           
+            <h3 style="padding-top: 25px;">High-speed Wi-Fi</h3>
+          </div>
+          <div class="box">
+            <i class="fas fa-mug-hot" style="padding-top: 35px;"></i>            
+            <h3 style="padding-top: 25px;">Free breakfast</h3>
+          </div>
+          <div class="box">
+            <i class="fa-solid fa-jug-detergent" style="padding-top: 35px;"></i>          
+            <h3 style="padding-top: 25px;">Free Laundry</h3>
+          </div>
+        </div>
+        <div class="right">
+          <img src="image/r.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer mtop" id="services">
+    <div class="container">
+      <div class="heading">
+        <h5>OUR ROOMS</h5>
+        <h2>Fascinating rooms & facilities </h2>
+      </div>
+      <div class="content grid2 mtop">
+        <div class="box flex">
+          <div class="left slideshow-container">
+              <div class="mySlides1 fade">
+                <img src="image/1a.jpg">
+              </div>
+              <div class="mySlides1 fade">
+                <img src="image/1b.jpg">
+              </div>
+              <div class="mySlides1 fade">
+                <img src="image/1c.jpg">
+              </div>
+          </div>
+          <div class="right">
+            <h4>Basic Room</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Geyser, Free Wi-Fi, Cupboard</p>
+            <h5>₹10000/month</h5>
+            <button class="flex1" id="room1-button" onclick="changeStatus1()">
+              <span>Check Availability</span>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <script src="js/script1.js"></script>
+
+        <div class="box flex">
+          <div class="left slideshow-container">
+            <div class="mySlides2 fade">
+              <img src="image/2a.jpg">
+            </div>
+            <div class="mySlides2 fade">
+              <img src="image/2b.jpg">
+            </div>
+            <div class="mySlides2 fade">
+              <img src="image/2c.jpg">
+            </div>
+          </div>
+          <div class="right">
+            <h4>Semi-Deluxe Room</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Geyser, Free Wi-Fi, Cupboard, TV, Attached washroom</p>
+            <h5>₹15000/month</h5>
+            <button class="flex1" id="room2-button" onclick="changeStatus2()">
+              <span>Check Availability</span>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <script src="js/script2.js"></script>
+
+        <div class="box flex">
+          <div class="left slideshow-container">
+              <div class="mySlides3 fade">
+                <img src="image/3a.jpg">
+              </div>
+              <div class="mySlides3 fade">
+                <img src="image/3b.jpg">
+              </div>
+              <div class="mySlides3 fade">
+                <img src="image/3c.jpg">
+              </div>
+          </div>
+          <div class="right">
+            <h4>Deluxe Room</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Geyser, Free Wi-Fi, Cupboard, TV, AC, Attached washroom</p>
+            <h5>₹15000/month + AC bill</h5>
+            <button class="flex1" id="room3-button" onclick="changeStatus3()">
+              <span>Check Availability</span>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <script src="js/script3.js"></script>
+
+        <div class="box flex">
+          <div class="left slideshow-container">
+              <div class="mySlides4 fade">
+                <img src="image/4a.jpg">
+              </div>
+              <div class="mySlides4 fade">
+                <img src="image/4b.jpg">
+              </div>
+              <div class="mySlides4 fade">
+                <img src="image/4c.jpg">
+              </div>
+          </div>
+          <div class="right">
+            <h4>Super-Deluxe Room</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Geyser, Free Wi-Fi, Cupboard, AC, TV, Attached washroom, balcony</p>
+            <h5>₹20000/month + AC bill</h5>
+            <button class="flex1" id="room4-button" onclick="changeStatus4()">
+              <span>Check Availability</span>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <script src="js/script4.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <section class="area top">
+    <div class="container">
+      <div class="heading">
+        <h5>Relaxing Zone</h5>
+        <h3>The areas we cover under PGA</h3>
+      </div>
+      <div class="content flex mtop">
+        <div class="left">
+          <img src="image/aera.jpg" alt="" width="590px" height="440px" style="padding-right: 50px;">
+        </div>
+        <div class="right">
+          <ul>
+            <li>Games Area</li>
+            <li>Swimming pool </li>
+            <li>Gym</li>
+          </ul>
+          <p>Welcome to our PG's ultimate relaxing zone! Step into a world of tranquility and rejuvenation, where we have carefully designed a space to cater to all your recreational needs. Our relaxing zone boasts a variety of amenities to help you unwind and destress after a long day. Dive into the thrilling world of entertainment in our games area, where you can challenge your friends to a friendly game of pool, or table tennis. Let your competitive spirit soar as you engage in exhilarating matches, creating lasting memories and fostering new friendships..</p>
+          <p>At our PG's relaxing zone, we understand the importance of creating a space that caters to your holistic well-being. Whether you're seeking lively games, invigorating workouts, or moments of tranquility, our amenities are designed to provide you with a well-rounded living experience. Come and immerse yourself in our games area, gym, and swimming pool, and discover a world of recreation and relaxation right at your doorstep.</p>
+        </div>
+      </div>   
+    </div>
+  </section>
+
+  <section class="offer2 about wrapper timer top" id="shop">
+    <div class="container">
+      <div class="heading">
+        <h5>EXCLUSIVE OFFERS </h5>
+        <h3>You can get an exclusive offer </h3>
+      </div>
+      <div class="content grid  top">
+        <div class="box">
+          <h5>UP TO 30% OFF</h5>
+          <h3>Early Bird Discount</h3>
+          <span>4.5 <label>(400 Reviews)</label> </span>
+          <p> Book your stay at our PG in advance and enjoy a 30% discount on your monthly rent. </p>
+          <div class="flex">
+            <i class="fal fa-alarm-clock"> Duration: 12 Hours</i>
+            <i class="far fa-dot-circle"> 18+ years</i>
+          </div>
+          <button class="flex1" id="excoff1-button" onclick="changeStatus5()">
+            <span>Check Availability</span>
+            <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </div>
+        <script src="js/script5.js"></script>
+
+        <div class="box">
+          <h5>UP TO 20% OFF</h5>
+          <h3>Refer a Friend, Earn Rewards</h3>
+          <span>4.9 <label>(532 Reviews)</label> </span>
+          <p>Refer a friend to stay at our PG, and when they book a minimum one-month stay, both you and your friend will receive a special reward.</p>
+          <div class="flex">
+            <i class="fal fa-alarm-clock"> Duration: 2 Days</i>
+            <i class="far fa-dot-circle"> 18+ years</i>
+          </div>
+          <button class="flex1" id="excoff2-button" onclick="changeStatus6()">
+            <span>Check Availability</span>
+            <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </div>
+        <script src="js/script6.js"></script>
+
+        <div class="box">
+          <h5>UP TO 30% OFF</h5>
+          <h3>Extended Stay Discount</h3>
+          <span>4.7 <label>(487 Reviews)</label> </span>
+          <p>Planning to stay with us for a longer period? Book a stay of six months or more and receive a discounted rate on your monthly rent. </p>
+          <div class="flex">
+            <i class="fal fa-alarm-clock"> Duration: 24 Hours</i>
+            <i class="far fa-dot-circle"> 18+ years</i>
+          </div>
+          <button class="flex1" id="excoff3-button" onclick="changeStatus7()">
+            <span>Check Availability</span>
+            <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </div>
+        <script src="js/script7.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery top" id="gallery">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="image/g1.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="image/g2.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="image/g6.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="image/g4.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="image/g5.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="image/g7.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="image/g2.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="image/g3.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      slideTransition: 'linear',
+      autoplayTimeout: 4000,
+      autoplaySpeed: 4000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 3
+        },
+        1000: {
+          items: 5
+        }
+      }
+    })
+  </script>
+
+  <section class="customer top" id="testimonials">
+    <div class="container">
+      <div class="heading">
+        <h5>TESTIMONIALS </h5>
+        <h3>What our customers say </h3>
+      </div>
+      <div class="owl-carousel owl-theme mtop">
+        <div class="item">
+          <div class="rate">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Awesome Place</h3>
+          <p>"I have been a resident of this PG for over a year now, and I must say it has been a fantastic experience. The management team goes above and beyond to ensure the comfort and well-being of all residents. The rooms are spacious, well-lit, and thoughtfully designed to provide a conducive environment for both work and relaxation. The common areas are well-maintained and offer a great place to socialize with other residents. I wholeheartedly recommend PGA to anyone seeking a comfortable and professionally managed accommodation."</p>
+          <div class="admin flex">
+            <div class="img">
+              <img src="image/CA.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>Shruti Sinha</h3>
+              <span>CA</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="rate">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Comfortable Stay </h3>
+          <p>"I can confidently say that PGA is one of the best I've ever stayed in. The attention to detail is remarkable, with a focus on creating a comfortable and convenient living environment. The staff members are always ready to assist and ensure that all residents' needs are met. The PG also offers excellent dining options. The location is excellent, with easy access to shopping centers, parks, and entertainment venues. Overall, I couldn't be happier with my experience in PGA, and I highly recommend it to anyone seeking a premium living experience."</p>
+          <div class="admin flex">
+            <div class="img">
+              <img src="image/designer.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>Rahul Sharma</h3>
+              <span>UI/UX Designer</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="rate">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Excellent Management</h3>
+          <p>"Living in PGA has been a wonderful experience. The facilities, including the Wi-Fi, laundry, and maintenance services, are efficient and reliable. The management team is always accessible and responsive to any concerns or queries. The location is also great, with easy access to markets, restaurants, and public transportation. I'm truly grateful to have found this PG, and I highly recommend it to anyone looking for a well-managed living space."</p>
+          <div class="admin flex">
+            <div class="img">
+              <img src="image/Software_eng.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>Samar Rajput</h3>
+              <span>Software Engineer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: false,
+      navText: ["<i class='far fa-long-arrow-alt-left'></i>", "<i class='far fa-long-arrow-alt-right'></i>"],
+      autoplay: true,
+      // slideTransition: 'linear',
+      autoplayTimeout: 6000,
+      autoplaySpeed: 3000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1638187678048!5m2!1sen!2snp" width="600" height="450" style="border:0;"
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <div class="container top">
+      <div class="contactF" id="contact">
+        <h2>Contact Form</h2>
+        <p>Interested in our PG accommodations? Fill out the form below, and our friendly team will get in touch with you to provide more information and assist you in finding the perfect living space tailored to your needs.</p>
+        <div class="input flex">
+          <form id="query-form" onsubmit="submitForm(event)">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br><br>
+            <label for="query">Query:</label>
+            <textarea id="query" required></textarea><br><br>
+            <button class="flex1" id="submit-button" type="submit"> <span>Submit</span>
+              <i class="fas fa-arrow-circle-right"></i></button>
+          </form>
+        </div>
+      </div>
+      <script src="js/contact_form.js"></script>
+      <div class="content grid  top">
+        <div class="box">
+          <div class="logo">
+            <p class="logo-header">PGA</p>
+          </div>
+          <p>PGA offers a range of well-furnished and thoughtfully designed accommodations to suit your needs. Contact us today and embark on a remarkable living experience with PGA, where comfort and community come together seamlessly.</p>
+          <div class="social flex">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+        <div class="box">
+          <h2>Nearest Locations</h2>
+          <ul>
+            <li><i class="fas fa-angle-double-right"></i>TCS Delta Park - 3 km</li>
+            <li><i class="fas fa-angle-double-right"></i>Tech Mahindra - 4.5 km</li>
+            <li><i class="fas fa-angle-double-right"></i>Eco Park - 5 km</li>
+            <li><i class="fas fa-angle-double-right"></i>Axis Mall - 1.2 km</li>
+            <li><i class="fas fa-angle-double-right"></i>City Centre 2 - 8 km</li>
+            <li><i class="fas fa-angle-double-right"></i>Airport - 12 km</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h2>Facilities</h2>
+          <ul>
+            <li><i class="fas fa-angle-double-right"></i>Cafeteria</li>
+            <li><i class="fas fa-angle-double-right"></i>Swimming Pool</li>
+            <li><i class="fas fa-angle-double-right"></i>Gym</li>
+            <li><i class="fas fa-angle-double-right"></i>Games Area</li>
+            <li><i class="fas fa-angle-double-right"></i>Free breakfast</li>
+            <li><i class="fas fa-angle-double-right"></i>Free Laundry</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h2>Contact</h2>
+          <div class="icon flex">
+            <div class="i">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="text">
+              <h3>Address</h3>
+              <p>Street No. 14, Newtown, Kolkata, WB, India</p>
+            </div>
+          </div>
+          <div class="icon flex">
+            <div class="i">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>+91 99009 90099</p>
+            </div>
+          </div>
+          <div class="icon flex">
+            <div class="i">
+              <i class="far fa-envelope"></i>
+            </div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>PGA@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
