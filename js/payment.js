@@ -1,0 +1,30 @@
+document.getElementById('paymentForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const amount = document.getElementById('amount').value;
+    const name = document.getElementById('name').value;
+    const phoneNumber = document.getElementById('phoneNumber').value;
+    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+    const invoiceContainer = document.getElementById('invoice');
+    invoiceContainer.innerHTML = '';
+    const invoiceHeading = document.createElement('h3');
+    invoiceHeading.textContent = 'Invoice';
+    invoiceContainer.appendChild(invoiceHeading);
+    const paymentMethodParagraph = document.createElement('p');
+    paymentMethodParagraph.textContent = 'Payment Method: ' + paymentMethod;
+    invoiceContainer.appendChild(paymentMethodParagraph);
+    const amountParagraph = document.createElement('p');
+    amountParagraph.textContent = 'Amount: ₹' + amount;
+    invoiceContainer.appendChild(amountParagraph);
+    const customerDetailsContainer = document.createElement('div');
+    customerDetailsContainer.classList.add('customer-details');
+    const nameParagraph = document.createElement('p');
+    nameParagraph.textContent = 'Name: ' + name;
+    customerDetailsContainer.appendChild(nameParagraph);
+    const phoneNumberParagraph = document.createElement('p');
+    phoneNumberParagraph.textContent = 'Phone Number: ' + phoneNumber;
+    customerDetailsContainer.appendChild(phoneNumberParagraph);
+    invoiceContainer.appendChild(customerDetailsContainer);
+    document.getElementById('paymentForm').classList.add('hidden');
+    document.getElementById('successMessage').classList.remove('hidden');
+});
+  
